@@ -67,8 +67,8 @@ if __name__ == '__main__':
 
         if not is_available():
             if not os.path.isfile(lock_file):
-                clear_cache()
-                contact_webmaster("server might be down, and cache is partially cleaned")
+                # clear_cache()
+                contact_webmaster("server might be down")
                 os.system("touch " + lock_file)
         else:
             if os.path.isfile(lock_file):
